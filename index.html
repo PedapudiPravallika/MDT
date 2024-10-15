@@ -292,7 +292,7 @@
 
         .slide {
             width: 100%;
-            flex: 1 0 10%;s
+            flex: 1 0 10%;
         }
 
         .slide img {
@@ -338,6 +338,7 @@ body {
         footer {
             background-color: #0d2d61;
             color: #fff;
+            width: auto;
             height: 120vh;
             padding: 20px 0;
             justify-content: space-between;
@@ -369,8 +370,8 @@ body {
         }
 
         .logo img {
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             border-radius: 10px;
         }
 
@@ -430,7 +431,7 @@ body {
 
         .google-map {
             position: relative;
-            width: 700px;
+            width: 800px;
             height: 650px;
         }
 
@@ -464,6 +465,21 @@ body {
         margin-right: 300px;
         width: 30%;
     }
+
+        .google-map iframe {
+            margin-left: -380px;
+            width: 40%;
+            height: 50%;
+            border: 0;
+        }
+
+        h3{
+         margin-top: -20px;
+        }
+
+        h4{
+          margin-top: -280px;
+        }
 }
 
 @keyframes zoomInOut {
@@ -475,11 +491,49 @@ body {
     }
 }
 
+
 footer {
     margin-top: 0px; /* Avoid negative margins for better content flow */
     background-color: #0d2d61;
     padding: 40px 0;
 }
+
+
+/* General Styles */
+.container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+ul.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 600px) {
+    .container1 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .Image, .contact-info {
+        width: 45%;
+    }
+}
+
+@media (min-width: 768px) {
+    .text h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-info li {
+        font-size: 1.2rem;
+    }
+}
+
     </style>
 
    <header class="header">
@@ -588,20 +642,22 @@ footer {
                 <img src="C:\Users\vikas\OneDrive\Desktop\MDT\assests\img\MDT.jpeg" alt="Logo" height="180px" width="250px">
             </div>
             <ul class="contact-info">
-                <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address:</strong> 123 Street Name, City, Country</li>
-                <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:</strong> contact@example.com</li>
+                <li><strong>Address:</strong> 123 Street Name, City, Country</li>
+                <li><strong>Email:</strong> contact@example.com</li>
                 <li><strong>Mobile:</strong> +123 456 7890</li>
-                <li><strong>&nbsp;&nbsp;&nbsp;Landline:</strong> +098 765 4321</li>
-                <li><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Website:</strong> www.example.com</li>
+                <li><strong>Landline:</strong> +098 765 4321</li>
+                <li><strong>Website:</strong> www.example.com</li>
             </ul>
-        </div><br><br><br><br>
-        <center><div class="google-map">
-        <a href="https://www.google.com/maps/dir/?api=1&destination=179-180%2C%20Auto%20Nagar%2C%20Visakhapatnam%2C%20Andhra%20Pradesh%20530012" target="_blank"></a>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3801.078424459014!2d83.19958477591486!3d17.693754993905642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3968fd017223a3%3A0x8db85b67a7f558d4!2s179-180%2C%20Auto%20Nagar%2C%20Visakhapatnam%2C%20Andhra%20Pradesh%20530012!5e0!3m2!1sen!2sin!4v1728557950191!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div><br><br><br><br>
-    <h3><center>@copyright 2024</center></h3>
+        </div>
+        <h3><center>Location:</center></center></h3><br>
+        <center>
+            <div class="google-map">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=179-180%2C%20Auto%20Nagar%2C%20Visakhapatnam%2C%20Andhra%20Pradesh%20530012" target="_blank"></a>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3801.078424459014!2d83.19958477591486!3d17.693754993905642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3968fd017223a3%3A0x8db85b67a7f558d4!2s179-180%2C%20Auto%20Nagar%2C%20Visakhapatnam%2C%20Andhra%20Pradesh%20530012!5e0!3m2!1sen!2sin!4v1728557950191!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </center><br>
+        <h4><center>copyright@ 2024 MD Technologies</center></h4>
     </footer>
-
     
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
@@ -609,7 +665,7 @@ footer {
 
         mobileMenu.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-        });
+        }); 
     </script>
 
     <script>
